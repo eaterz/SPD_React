@@ -1,4 +1,3 @@
-import { useState } from "react";
 import QuoteList from "./QuoteList";
 
 function App() {
