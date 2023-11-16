@@ -18,21 +18,19 @@ export default function QuoteList() {
   }, []);
 
   const TxtJSX = txt.map((teksts) => {
-    return (
-      <>
-        {loading == true ? (
-          <p>ladejas</p>
-        ) : (
-          <Quote autors={teksts.author} citats={teksts.quote} />
-        )}
-      </>
-    );
+    return <Quote autors={teksts.author} citats={teksts.quote} />;
   });
 
   return (
     <div>
-      <h1>Quotes</h1>
-      {TxtJSX}
+      {loading == true ? (
+        <p>ladejas</p>
+      ) : (
+        <>
+          <h1>Quotes</h1>
+          {TxtJSX}
+        </>
+      )}
     </div>
   );
 }
